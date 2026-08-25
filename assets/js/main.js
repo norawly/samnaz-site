@@ -488,11 +488,35 @@
     $$('[data-filter-group]').forEach(function (group) {
       var btns = $$('button', group);
       var cards = $$(group.dataset.filterGroup + ' [data-cat]');
+      // блок «в этой категории пока пусто» — если он есть рядом
+      var empty = group.dataset.filterEmpty ? $(group.dataset.filterEmpty) : null;
+
+      var apply = function (v) {
+        var shown = 0;
+        cards.forEach(function (c) {
+          // data-cat может содержать несколько меток через пробел:
+          // «roads done» — и дорога, и завершённый объект
+          var tags = (c.dataset.cat || '').split(/\s+/);
+          var on = (v === '*' || tags.indexOf(v) !== -1);
+          c.style.display = on ? '' : 'none';
+          if (on) shown++;
+        });
+        if (empty) empty.hidden = shown > 0;
+        // подпись под мозаикой на пустой вкладке ни к чему
+        $$(group.dataset.filterGroup + ' .mosaic-edge').forEach(function (el) {
+          el.style.display = shown ? '' : 'none';
+        });
+        // строки мозаики без единой видимой плитки убираем, чтобы не зияли
+        $$(group.dataset.filterGroup + ' .mrow').forEach(function (row) {
+          var live = $$('[data-cat]', row).some(function (c) { return c.style.display !== 'none'; });
+          row.style.display = live ? '' : 'none';
+        });
+      };
+
       btns.forEach(function (b) {
         b.addEventListener('click', function () {
           btns.forEach(function (x) { x.classList.toggle('on', x === b); });
-          var v = b.dataset.val;
-          cards.forEach(function (c) { c.style.display = (v === '*' || c.dataset.cat === v) ? '' : 'none'; });
+          apply(b.dataset.val);
         });
       });
     });

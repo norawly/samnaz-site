@@ -1171,3 +1171,26 @@ img.logo-mark{
   transform:translateX(-58%) scale(.94) !important;
   transition:none !important;
 }
+
+/* ============================================================
+   ПРОЕКТЫ — вкладки по статусу и пустое состояние
+   ============================================================ */
+/* разделитель между статусом объекта и его типом */
+.filters-sep{
+  flex:none;align-self:center;width:1px;height:20px;
+  background:var(--line-2);margin:0 8px;
+}
+@media (max-width:680px){ .filters-sep{margin:0 2px} }
+
+.proj-empty{
+  max-width:52ch;margin:8px 0 4px;padding:clamp(30px,4vw,52px) 0;
+  border-top:1px solid var(--line);
+}
+.proj-empty h3{
+  font-family:var(--ff-display);font-weight:600;
+  font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.02em;margin:16px 0 0;
+}
+.proj-empty p{margin:16px 0 30px;color:var(--tx-mut);line-height:1.75}
+
+/* описание в плитке — крупнее интерлиньяж, спокойнее цвет */
+.mtile-in p{line-height:1.7}
