@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+
+# секреты бота — в репозиторий не попадают
+bot/.env
+bot/.dev.vars
+
+# рабочие файлы, на сайт не идут
+_unused/
+_qa.html
+.claude/

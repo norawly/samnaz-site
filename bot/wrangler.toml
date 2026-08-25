@@ -1,0 +1,19 @@
+name = "samnaz-forms"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# Хранилище: список подписанных чатов, антиспам, запасные копии заявок.
+# id подставится после команды: wrangler kv namespace create SAMNAZ
+[[kv_namespaces]]
+binding = "SAMNAZ"
+id = "ВСТАВЬТЕ_ID_ПОСЛЕ_СОЗДАНИЯ"
+
+[vars]
+# Домен сайта — с него разрешено отправлять формы
+ALLOWED_ORIGIN = "https://sam-naz.kz"
+
+# Секреты задаются отдельно, в коде и в git их нет:
+#   wrangler secret put BOT_TOKEN
+#   wrangler secret put BOT_LOGIN
+#   wrangler secret put BOT_PASSWORD
+#   wrangler secret put WEBHOOK_SECRET
