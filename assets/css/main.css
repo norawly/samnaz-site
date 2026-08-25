@@ -1100,9 +1100,15 @@ body{line-height:1.72}
    ЗАСТАВКА — фирменный ролик
    ============================================================ */
 .intro{
-  position:fixed;inset:0;z-index:130;background:#0B0F14;
+  position:fixed;inset:0;z-index:130;
   display:grid;place-items:center;overflow:hidden;
   transition:opacity .8s var(--ease),visibility .8s;
+  /* Фон повторяет градиент самого ролика: тёмный левый низ, подсветка
+     справа сверху. Нужен для вертикальных экранов, где кадр 16:9 не
+     закрывает высоту — поля сверху и снизу становятся продолжением кадра. */
+  background:
+    radial-gradient(115% 80% at 80% 10%, rgba(56,64,71,.50) 0%, rgba(32,38,44,.22) 46%, transparent 76%),
+    linear-gradient(212deg, #242A2F 0%, #1A2024 38%, #10161A 74%, #0C1115 100%);
 }
 .intro.done{opacity:0;visibility:hidden;pointer-events:none}
 .intro video{
@@ -1119,8 +1125,18 @@ body{line-height:1.72}
 }
 .intro-skip.show{opacity:1}
 .intro-skip:hover{border-color:var(--gold);color:var(--gold)}
+/* Вертикальный экран: кадр 16:9 занимает ширину, поля сверху и снизу
+   закрашивает фон .intro. Кромки кадра растворяем маской, чтобы стык
+   с фоном не читался ни на одном оттенке. */
+@media (orientation:portrait){
+  .intro video{
+    width:100%;height:auto;max-height:100%;
+    aspect-ratio:16/9;object-fit:cover;
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 90%,transparent 100%);
+            mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 90%,transparent 100%);
+  }
+}
 @media (max-width:680px){
-  .intro video{object-fit:contain;background:#0B0F14}
   .intro-skip{right:14px;bottom:14px;padding:10px 16px;font-size:10px}
 }
 
