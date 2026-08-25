@@ -10,7 +10,7 @@ id = "ВСТАВЬТЕ_ID_ПОСЛЕ_СОЗДАНИЯ"
 
 [vars]
 # Домен сайта — с него разрешено отправлять формы
-ALLOWED_ORIGIN = "https://sam-naz.kz"
+ALLOWED_ORIGIN = "https://samnaz.group"
 
 # Секреты задаются отдельно, в коде и в git их нет:
 #   wrangler secret put BOT_TOKEN
