@@ -1148,3 +1148,10 @@ img.logo-mark{
 .logo-full{display:block;margin-bottom:26px}
 .logo-full img{width:auto;height:96px;display:block;filter:drop-shadow(0 4px 14px rgba(0,0,0,.45))}
 @media (max-width:680px){ .logo-full img{height:76px} }
+
+/* пока крупный кадр машины не готов — не показываем предыдущую */
+.shw-photo.is-wait{
+  opacity:0 !important;
+  transform:translateX(-58%) scale(.94) !important;
+  transition:none !important;
+}

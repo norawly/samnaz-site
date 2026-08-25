@@ -17,7 +17,7 @@
 
     var video = $('#introVideo', el);
     var skip = $('#introSkip', el);
-    var closed = false;
+    var closed = false, started = false;
 
     var close = function () {
       if (closed) return;
@@ -38,12 +38,22 @@
       setTimeout(function () { skip.classList.add('show'); }, 1200);
     }
     video.addEventListener('ended', close);
-    // подстраховка: если ролик не запустился, не держим посетителя
     video.addEventListener('error', close);
-    setTimeout(function () { if (video.paused && !video.currentTime) close(); }, 2500);
 
-    var p = video.play();
-    if (p && p.catch) p.catch(close);      // автозапуск заблокирован — просто пропускаем
+    // Ждём, пока ролик прогрузится целиком, и только потом запускаем.
+    // Всё это время виден первый кадр (постер) — заставка выглядит целой,
+    // а не «логотип, потом вдруг анимация с начала».
+    var start = function () {
+      if (started || closed) return;
+      started = true;
+      var p = video.play();
+      if (p && p.catch) p.catch(close);   // автозапуск заблокирован — просто пропускаем
+    };
+    video.addEventListener('canplaythrough', start, { once: true });
+    // на медленной сети не ждём вечно: через 2,5 с стартуем с тем, что есть
+    setTimeout(start, 2500);
+    // и если даже после этого ролик не пошёл — не держим посетителя
+    setTimeout(function () { if (video.paused) close(); }, 4500);
   }
 
   /* ---------- 2. Шапка: всегда видна, «стекло» после прокрутки ---------- */
@@ -235,7 +245,7 @@
     if (!grid) return;
     var limit = parseInt(grid.dataset.limit || '0', 10);
 
-    fetch('assets/data/equipment.json?v=19')
+    fetch('assets/data/equipment.json?v=24')
       .then(function (r) { return r.json(); })
       .then(function (list) {
         EQ = list;
@@ -281,6 +291,15 @@
           openShow(+card.dataset.i);
         });
         reveal(grid);
+
+        // когда страница успокоится — тихо кладём крупные кадры в кэш,
+        // чтобы карточка открывалась без ожидания
+        var later = function () {
+          if (window.requestIdleCallback) requestIdleCallback(warmAll, { timeout: 4000 });
+          else setTimeout(warmAll, 1800);
+        };
+        if (document.readyState === 'complete') later();
+        else window.addEventListener('load', later, { once: true });
       })
       .catch(function () {
         grid.innerHTML = '<p class="small">Каталог не загрузился. Откройте сайт через локальный сервер (см. README.md).</p>';
@@ -289,24 +308,23 @@
 
   /* раскрытие карточки текстом — телефонная версия */
   function toggleInline(card, e, grid) {
-    var open = $('.eq-more.open', grid);
-    var mine = card.nextElementSibling && card.nextElementSibling.classList.contains('eq-more')
-      ? card.nextElementSibling : null;
+    var open = $('.eq-more', grid);
+    var mine = !!(card.nextElementSibling &&
+                  card.nextElementSibling.classList.contains('eq-more'));
 
-    if (open && open !== mine) { open.classList.remove('open'); }
-    $$('.eq.is-open', grid).forEach(function (c) { if (c !== card) c.classList.remove('is-open'); });
+    // Свёрнутый блок обязательно убираем из DOM: он занимает всю ширину
+    // сетки (grid-column:1/-1), и пока он висит, соседняя карточка так
+    // и остаётся выброшенной на строку ниже.
+    var drop = function (el) {
+      if (!el) return;
+      el.classList.remove('open');
+      setTimeout(function () { if (el.parentNode) el.remove(); }, reduced ? 0 : 460);
+    };
 
-    if (mine) {
-      var wasOpen = mine.classList.contains('open');
-      mine.classList.toggle('open', !wasOpen);
-      card.classList.toggle('is-open', !wasOpen);
-      if (!wasOpen) setTimeout(function () {
-        mine.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
-      }, 220);
-      return;
-    }
+    $$('.eq.is-open', grid).forEach(function (c) { c.classList.remove('is-open'); });
+    drop(open);
+    if (mine) return;                 // повторный тап по той же карточке — просто закрыли
 
-    // блок создаётся один раз и вставляется после карточки
     var box = document.createElement('div');
     box.className = 'eq-more';
     box.innerHTML =
@@ -331,6 +349,87 @@
 
   /* ---------- 9. Карточка техники ---------- */
   var showIdx = 0;
+  var photoToken = 0;      // защита от гонки: пока грузилось, могли пролистать дальше
+  var warmed = {};
+
+  /* Кладём картинку в кэш браузера. Возвращает Image, чтобы можно было дождаться. */
+  function warm(src) {
+    if (!src) return null;
+    if (warmed[src]) return warmed[src];
+    var im = new Image();
+    im.src = src;
+    warmed[src] = im;
+    return im;
+  }
+
+  /* Подставляем фото машины так, чтобы ни на кадр не мелькнула предыдущая.
+     Сначала — мелкий кадр из сетки (он уже в кэше, появляется мгновенно),
+     следом без рывка подменяем на крупный. */
+  function setPhoto(box, e) {
+    var photo = $('#shwPhoto', box);
+    if (!photo) return;
+
+    var token = ++photoToken;
+    var small = e.img || '';
+    var large = e.imgLg || e.img || '';
+
+    photo.alt = e.name || '';
+    photo.classList.add('is-wait');    // прячем прошлую машину, пока новая не готова
+
+    var show = function (src) {
+      if (token !== photoToken || !src) return;
+      photo.src = src;
+      photo.classList.remove('is-wait');
+    };
+
+    var s = warm(small);
+    if (s) {
+      if (s.complete && s.naturalWidth) show(small);
+      else { s.addEventListener('load', function () { show(small); }, { once: true }); }
+    }
+
+    var l = warm(large);
+    if (l) {
+      if (l.complete && l.naturalWidth) show(large);
+      else {
+        l.addEventListener('load', function () { show(large); }, { once: true });
+        l.addEventListener('error', function () { show(small); }, { once: true });
+      }
+    }
+
+    // совсем ничего не загрузилось — не оставляем пустое место навсегда
+    setTimeout(function () { if (token === photoToken) photo.classList.remove('is-wait'); }, 4000);
+  }
+
+  /* Соседние машины — чтобы листание стрелками было мгновенным */
+  function warmNeighbours(i) {
+    if (!EQ || !EQ.length) return;
+    [i - 1, i + 1, i - 2, i + 2].forEach(function (n) {
+      var e = EQ[(n + EQ.length * 2) % EQ.length];
+      if (e) { warm(e.img); warm(e.imgLg); }
+    });
+  }
+
+  /* Фоновый прогрев всего каталога — по одной картинке, чтобы не мешать
+     остальной загрузке. На телефоне не делаем: там карточка раскрывается
+     текстом в сетке и крупные кадры не нужны. */
+  function warmAll() {
+    if (!EQ || !EQ.length) return;
+    if (window.matchMedia('(max-width:680px)').matches) return;
+    var c = navigator.connection;
+    if (c && (c.saveData || /^(slow-)?2g$/.test(c.effectiveType || ''))) return;
+
+    var i = 0;
+    var next = function () {
+      if (i >= EQ.length) return;
+      var e = EQ[i++];
+      var im = warm(e && e.imgLg);
+      if (!im || (im.complete && im.naturalWidth)) return setTimeout(next, 60);
+      im.addEventListener('load', function () { setTimeout(next, 120); }, { once: true });
+      im.addEventListener('error', function () { setTimeout(next, 120); }, { once: true });
+    };
+    next();
+  }
 
   function openShow(i) {
     var box = $('#shw');
@@ -342,11 +441,7 @@
     var wasOpen = box.classList.contains('on');
     if (wasOpen) { box.classList.remove('on'); void box.offsetWidth; }
 
-    var photo = $('#shwPhoto', box);
-    if (photo) {
-      photo.src = e.imgLg || e.img || '';
-      photo.alt = e.name || '';
-    }
+    setPhoto(box, e);
 
     $('.shw-count', box).textContent = pad(showIdx + 1) + ' / ' + pad(EQ.length);
     $('.shw-info-body', box).innerHTML =
@@ -360,6 +455,7 @@
 
     box.classList.add('on');
     document.body.classList.add('is-locked');
+    warmNeighbours(showIdx);
   }
 
   function showroom() {
