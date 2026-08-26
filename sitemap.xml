@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://samnaz.group/</loc><priority>1.0</priority></url>
-  <url><loc>https://samnaz.group/about.html</loc><priority>0.8</priority></url>
-  <url><loc>https://samnaz.group/services.html</loc><priority>0.9</priority></url>
-  <url><loc>https://samnaz.group/projects.html</loc><priority>0.8</priority></url>
-  <url><loc>https://samnaz.group/equipment.html</loc><priority>0.9</priority></url>
-  <url><loc>https://samnaz.group/contacts.html</loc><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://samnaz.group/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/services</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/services"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/services"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/equipment</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/equipment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/equipment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/equipment"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/en/equipment</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/equipment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/equipment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/equipment"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/projects</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/projects"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/en/projects</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/projects"/>
+    <lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/about</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/about"/>
+    <lastmod>2026-08-26</lastmod><changefreq>yearly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/about"/>
+    <lastmod>2026-08-26</lastmod><changefreq>yearly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/contacts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/contacts"/>
+    <lastmod>2026-08-26</lastmod><changefreq>yearly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://samnaz.group/en/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://samnaz.group/contacts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://samnaz.group/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://samnaz.group/contacts"/>
+    <lastmod>2026-08-26</lastmod><changefreq>yearly</changefreq><priority>0.7</priority>
+  </url>
 </urlset>

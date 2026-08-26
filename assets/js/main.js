@@ -9,6 +9,46 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var EQ = null; // кэш каталога техники
+  var LANG = (document.documentElement.lang || 'ru').slice(0, 2) === 'en' ? 'en' : 'ru';
+
+  /* Строки, которые собираются скриптом. Всё остальное лежит в разметке. */
+  var T = {
+    ru: {
+      swipe:     'Листайте вбок →',
+      onRequest: 'Характеристики — по запросу',
+      openCard:  'Открыть карточку →',
+      allEquip:  'Вся техника',
+      loadFail:  'Каталог не загрузился. Обновите страницу — если не помогло, напишите нам.',
+      rentBlurb: 'Доступна для аренды с оператором и без. Сроки мобилизации и стоимость смены — по запросу.',
+      askPrice:  'Запросить стоимость',
+      specs:     'Технические характеристики',
+      byRequest: 'по запросу',
+      fName: 'Имя', fPhone: 'Телефон', fMail: 'E-mail', fCompany: 'Компания', fTech: 'Техника',
+      leadHead: '🟡 Новая заявка с сайта', task: 'Задача:', page: 'Страница: ', time: 'Время: ',
+      already: 'Заявка уже отправлена. Если нужно срочно — позвоните: +7 777 833-22-67',
+      sent:    'Спасибо! Заявка отправлена — мы свяжемся с вами в ближайшее время.',
+      queued:  'Спасибо! Заявка принята. Для срочной связи: +7 777 833-22-67',
+      failed:  'Не удалось отправить. Позвоните нам: +7 777 833-22-67'
+    },
+    en: {
+      swipe:     'Swipe sideways →',
+      onRequest: 'Specifications on request',
+      openCard:  'Open profile →',
+      allEquip:  'All equipment',
+      loadFail:  'The catalogue did not load. Refresh the page — if that does not help, write to us.',
+      rentBlurb: 'Available for rent with or without an operator. Mobilisation times and shift rates on request.',
+      askPrice:  'Request a price',
+      specs:     'Technical specifications',
+      byRequest: 'on request',
+      fName: 'Name', fPhone: 'Phone', fMail: 'E-mail', fCompany: 'Company', fTech: 'Equipment',
+      leadHead: '🟡 New request from the website', task: 'Task:', page: 'Page: ', time: 'Time: ',
+      already: 'Your request has already been sent. If it is urgent, call +7 777 833-22-67',
+      sent:    'Thank you. Your request has been sent — we will be in touch shortly.',
+      queued:  'Thank you. Your request has been received. For urgent matters call +7 777 833-22-67',
+      failed:  'Could not send. Please call us: +7 777 833-22-67'
+    }
+  }[LANG];
+
 
   /* ---------- 1. Заставка ---------- */
   function intro() {
@@ -169,7 +209,7 @@
       if (box && !$('.mosaic-hint')) {
         var hint = document.createElement('div');
         hint.className = 'mosaic-hint';
-        hint.textContent = 'Листайте вбок →';
+        hint.textContent = T.swipe;
         box.insertAdjacentElement('afterend', hint);
       }
       return;
@@ -245,7 +285,7 @@
     if (!grid) return;
     var limit = parseInt(grid.dataset.limit || '0', 10);
 
-    fetch('assets/data/equipment.json?v=24')
+    fetch('/assets/data/equipment' + (LANG === 'en' ? '.en' : '') + '.json?v=28')
       .then(function (r) { return r.json(); })
       .then(function (list) {
         EQ = list;
@@ -258,8 +298,8 @@
             '<span class="eq-b">' +
               '<span class="eq-n">' + esc(e.name) + '</span>' +
               (first ? '<span class="eq-s">' + esc(first[0]) + ' · ' + esc(first[1]) + '</span>'
-                     : '<span class="eq-s">Характеристики — по запросу</span>') +
-              '<span class="eq-open">Открыть карточку →</span>' +
+                     : '<span class="eq-s">' + T.onRequest + '</span>') +
+              '<span class="eq-open">' + T.openCard + '</span>' +
             '</span></button>';
         }).join('');
 
@@ -267,7 +307,7 @@
         if (fbox) {
           var types = list.map(function (e) { return e.type; })
             .filter(function (v, i, a) { return v && a.indexOf(v) === i; }).sort();
-          fbox.innerHTML = '<button class="on" data-val="*">Вся техника</button>' +
+          fbox.innerHTML = '<button class="on" data-val="*">' + T.allEquip + '</button>' +
             types.map(function (t) { return '<button data-val="' + esc(t) + '">' + esc(t) + '</button>'; }).join('');
           $$('button', fbox).forEach(function (b) {
             b.addEventListener('click', function () {
@@ -287,7 +327,7 @@
             toggleInline(card, list[+card.dataset.i], grid);
             return;
           }
-          if (!$('#shw')) { location.href = 'equipment.html'; return; }
+          if (!$('#shw')) { location.href = 'equipment'; return; }
           openShow(+card.dataset.i);
         });
         reveal(grid);
@@ -302,7 +342,7 @@
         else window.addEventListener('load', later, { once: true });
       })
       .catch(function () {
-        grid.innerHTML = '<p class="small">Каталог не загрузился. Откройте сайт через локальный сервер (см. README.md).</p>';
+        grid.innerHTML = '<p class="small">' + T.loadFail + '</p>';
       });
   }
 
@@ -331,13 +371,13 @@
       '<span class="t">' + esc(e.type) + '</span>' +
       '<h4>' + esc(e.name) + '</h4>' +
       '<p>' + (e.desc ? esc(e.desc)
-        : 'Доступна для аренды с оператором и без. Сроки мобилизации и стоимость смены — по запросу.') + '</p>' +
+        : T.rentBlurb) + '</p>' +
       ((e.specs && e.specs.length)
         ? '<dl>' + e.specs.map(function (sp) {
             return '<div><dt>' + esc(sp[0]) + '</dt><dd>' + esc(sp[1]) + '</dd></div>';
           }).join('') + '</dl>'
         : '') +
-      '<a class="btn btn-gold" href="#request">Запросить стоимость' +
+      '<a class="btn btn-gold" href="#request">' + T.askPrice +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>';
     card.insertAdjacentElement('afterend', box);
     card.classList.add('is-open');
@@ -448,10 +488,10 @@
       '<span class="shw-type">' + esc(e.type) + '</span>' +
       '<h3>' + esc(e.name) + '</h3>' +
       '<p class="shw-desc">' + (e.desc ? esc(e.desc)
-        : 'Доступна для аренды с оператором и без. Сроки мобилизации и стоимость смены — по запросу.') + '</p>' +
+        : T.rentBlurb) + '</p>' +
       '<div class="shw-spec">' + ((e.specs && e.specs.length) ? e.specs.map(function (sp, n) {
         return '<div style="--i:' + n + '"><span>' + esc(sp[0]) + '</span><span>' + esc(sp[1]) + '</span></div>';
-      }).join('') : '<div style="--i:0"><span>Технические характеристики</span><span>по запросу</span></div>') + '</div>';
+      }).join('') : '<div style="--i:0"><span>' + T.specs + '</span><span>' + T.byRequest + '</span></div>') + '</div>';
 
     box.classList.add('on');
     document.body.classList.add('is-locked');
@@ -488,11 +528,35 @@
     $$('[data-filter-group]').forEach(function (group) {
       var btns = $$('button', group);
       var cards = $$(group.dataset.filterGroup + ' [data-cat]');
+      // блок «в этой категории пока пусто» — если он есть рядом
+      var empty = group.dataset.filterEmpty ? $(group.dataset.filterEmpty) : null;
+
+      var apply = function (v) {
+        var shown = 0;
+        cards.forEach(function (c) {
+          // data-cat может содержать несколько меток через пробел:
+          // «roads done» — и дорога, и завершённый объект
+          var tags = (c.dataset.cat || '').split(/\s+/);
+          var on = (v === '*' || tags.indexOf(v) !== -1);
+          c.style.display = on ? '' : 'none';
+          if (on) shown++;
+        });
+        if (empty) empty.hidden = shown > 0;
+        // подпись под мозаикой на пустой вкладке ни к чему
+        $$(group.dataset.filterGroup + ' .mosaic-edge').forEach(function (el) {
+          el.style.display = shown ? '' : 'none';
+        });
+        // строки мозаики без единой видимой плитки убираем, чтобы не зияли
+        $$(group.dataset.filterGroup + ' .mrow').forEach(function (row) {
+          var live = $$('[data-cat]', row).some(function (c) { return c.style.display !== 'none'; });
+          row.style.display = live ? '' : 'none';
+        });
+      };
+
       btns.forEach(function (b) {
         b.addEventListener('click', function () {
           btns.forEach(function (x) { x.classList.toggle('on', x === b); });
-          var v = b.dataset.val;
-          cards.forEach(function (c) { c.style.display = (v === '*' || c.dataset.cat === v) ? '' : 'none'; });
+          apply(b.dataset.val);
         });
       });
     });
@@ -504,18 +568,18 @@
   function leadText(payload) {
     var esc = function (v) { return String(v == null ? '' : v).replace(/[<>&]/g, ''); };
     var rows = [
-      ['Имя', payload.name],
-      ['Телефон', payload.phone],
+      [T.fName, payload.name],
+      [T.fPhone, payload.phone],
       ['E-mail', payload.email],
-      ['Компания', payload.company],
-      ['Техника', payload.tech]
+      [T.fCompany, payload.company],
+      [T.fTech, payload.tech]
     ].filter(function (r) { return r[1]; })
      .map(function (r) { return r[0] + ': ' + esc(r[1]); });
 
-    var out = ['🟡 Новая заявка с сайта', ''].concat(rows);
-    if (payload.msg) out.push('', 'Задача:', esc(payload.msg));
-    out.push('', 'Страница: ' + esc(payload.page));
-    out.push('Время: ' + new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Almaty' }) + ' (Астана)');
+    var out = [T.leadHead, ''].concat(rows);
+    if (payload.msg) out.push('', T.task, esc(payload.msg));
+    out.push('', T.page + esc(payload.page));
+    out.push(T.time + new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Almaty' }) + ' (Astana)');
     return out.join('\n');
   }
 
@@ -567,7 +631,7 @@
 
         var payload = {};
         new FormData(f).forEach(function (v, k) { payload[k] = v; });
-        payload.page = location.pathname.split('/').pop() || 'index.html';
+        payload.page = location.pathname.split('/').pop() || 'index';
 
         if (payload.company_site) return;              // сработала приманка
         delete payload.company_site;
@@ -586,7 +650,7 @@
         // не чаще одной заявки в минуту с устройства
         var last = +(localStorage.getItem('snz-lead') || 0);
         if (Date.now() - last < 60000) {
-          done('Заявка уже отправлена. Если нужно срочно — позвоните: +7 777 833-22-67', false);
+          done(T.already, false);
           return;
         }
 
@@ -598,16 +662,16 @@
         task
           .then(function () {
             localStorage.setItem('snz-lead', String(Date.now()));
-            done('Спасибо! Заявка отправлена — мы свяжемся с вами в ближайшее время.', true);
+            done(T.sent, true);
           })
           .catch(function (err) {
             if (err && err.message === 'no-chat') {
               // получатель ещё не указан — заявку не теряем, показываем контакты
-              done('Спасибо! Заявка принята. Для срочной связи: +7 777 833-22-67', true);
+              done(T.queued, true);
               localStorage.setItem('snz-lead', String(Date.now()));
               return;
             }
-            done('Не удалось отправить. Позвоните нам: +7 777 833-22-67', false);
+            done(T.failed, false);
           });
       });
     });
@@ -640,11 +704,29 @@
     }, { rootMargin: '-45% 0px -45% 0px' });
     items.forEach(function (i) { io.observe(i); });
   }
+  /* Свечение фона едет медленнее страницы — фон чуть «дышит» при прокрутке */
+  function glow() {
+    var el = $('.glow');
+    if (!el || reduced) return;
+    var y = 0, tick = false;
+    var draw = function () {
+      el.style.setProperty('--glow-y', (y * 0.12).toFixed(1));
+      tick = false;
+    };
+    window.addEventListener('scroll', function () {
+      y = window.pageYOffset || 0;
+      if (!tick) { tick = true; requestAnimationFrame(draw); }
+    }, { passive: true });
+    draw();
+  }
+
   function chrome() {
     $$('[data-year]').forEach(function (e) { e.textContent = new Date().getFullYear(); });
-    var page = location.pathname.split('/').pop() || 'index.html';
+    // адреса без .html, но локально файлы открываются и как about.html — учитываем оба вида
+    var page = (location.pathname.split('/').pop() || '').replace(/\.html$/, '');
     $$('.nav a, .mnav a').forEach(function (a) {
-      if (a.getAttribute('href') === page) a.setAttribute('aria-current', 'page');
+      var href = (a.getAttribute('href') || '').replace(/\.html$/, '').replace(/^\//, '');
+      if (href === page || (href === '' && page === 'index')) a.setAttribute('aria-current', 'page');
     });
   }
 
@@ -657,6 +739,6 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     intro(); header(); mobileNav(); reveal(); odometer(); mosaic(); flow();
-    equipment(); showroom(); filters(); form(); marquee(); timeline(); chrome();
+    equipment(); showroom(); filters(); form(); marquee(); timeline(); chrome(); glow();
   });
 })();
