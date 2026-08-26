@@ -9,7 +9,7 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var EQ = null; // кэш каталога техники
-  var LANG = (document.documentElement.lang || 'ru').slice(0, 2) === 'en' ? 'en' : 'ru';
+  var LANG = { en: 'en', tr: 'tr' }[(document.documentElement.lang || 'ru').slice(0, 2)] || 'ru';
 
   /* Строки, которые собираются скриптом. Всё остальное лежит в разметке. */
   var T = {
@@ -46,6 +46,24 @@
       sent:    'Thank you. Your request has been sent — we will be in touch shortly.',
       queued:  'Thank you. Your request has been received. For urgent matters call +7 777 833-22-67',
       failed:  'Could not send. Please call us: +7 777 833-22-67'
+    }
+    ,
+    tr: {
+      swipe:     'Yana kaydırın →',
+      onRequest: 'Teknik özellikler talep üzerine',
+      openCard:  'Kartı aç →',
+      allEquip:  'Tüm makineler',
+      loadFail:  'Katalog yüklenemedi. Sayfayı yenileyin — sorun sürerse bize yazın.',
+      rentBlurb: 'Operatörlü veya operatörsüz kiralanabilir. Mobilizasyon süresi ve vardiya ücreti talep üzerine.',
+      askPrice:  'Fiyat isteyin',
+      specs:     'Teknik özellikler',
+      byRequest: 'talep üzerine',
+      fName: 'Ad', fPhone: 'Telefon', fMail: 'E-posta', fCompany: 'Şirket', fTech: 'Makine',
+      leadHead: '🟡 Siteden yeni talep', task: 'İş:', page: 'Sayfa: ', time: 'Saat: ',
+      already: 'Talebiniz zaten gönderildi. Acilse arayın: +7 777 833-22-67',
+      sent:    'Teşekkürler. Talebiniz iletildi — en kısa sürede sizinle iletişime geçeceğiz.',
+      queued:  'Teşekkürler. Talebiniz alındı. Acil durumlar için: +7 777 833-22-67',
+      failed:  'Gönderilemedi. Lütfen bizi arayın: +7 777 833-22-67'
     }
   }[LANG];
 
@@ -285,7 +303,7 @@
     if (!grid) return;
     var limit = parseInt(grid.dataset.limit || '0', 10);
 
-    fetch('/assets/data/equipment' + (LANG === 'en' ? '.en' : '') + '.json?v=28')
+    fetch('/assets/data/equipment' + (LANG === 'ru' ? '' : '.' + LANG) + '.json?v=31')
       .then(function (r) { return r.json(); })
       .then(function (list) {
         EQ = list;

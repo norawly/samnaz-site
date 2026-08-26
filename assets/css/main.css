@@ -1271,15 +1271,19 @@ body > header,body > main,body > footer{position:relative;z-index:1}
    ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
    ============================================================ */
 .lang-sw{
-  flex:none;display:inline-grid;place-items:center;
-  min-width:42px;height:30px;padding:0 9px;
-  border:1px solid var(--line-2);border-radius:99px;
-  font-family:var(--ff-mono);font-size:10px;letter-spacing:.14em;
-  color:var(--tx-mut);transition:color .35s var(--ease),border-color .35s var(--ease),background .35s var(--ease);
+  flex:none;display:inline-flex;align-items:center;gap:1px;
+  border:1px solid var(--line-2);border-radius:99px;overflow:hidden;
 }
-.lang-sw:hover{color:var(--gold);border-color:var(--gold);background:var(--gold-dim)}
-.hdr-side .lang-sw{margin-right:4px}
+.lang-sw a{
+  display:grid;place-items:center;min-width:34px;height:28px;padding:0 8px;
+  font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;
+  color:var(--tx-mut);transition:color .3s var(--ease),background .3s var(--ease);
+}
+.lang-sw a + a{box-shadow:inset 1px 0 0 var(--line)}
+.lang-sw a:hover{color:var(--gold);background:var(--gold-dim)}
+.hdr-side .lang-sw{margin-right:6px}
+@media (max-width:1240px){ .hdr-side .lang-sw a{min-width:30px;padding:0 6px} }
 @media (max-width:980px){ .hdr-side .lang-sw{display:none} }
 
 /* в мобильном меню — отдельной строкой рядом с телефоном */
-.mnav-foot .lang-sw{min-width:52px;height:34px;font-size:11px}
+.mnav-foot .lang-sw a{min-width:44px;height:32px;font-size:11px}
