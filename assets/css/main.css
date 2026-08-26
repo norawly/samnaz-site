@@ -1268,22 +1268,45 @@ body > header,body > main,body > footer{position:relative;z-index:1}
 }
 
 /* ============================================================
-   ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА
+   ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА — четыре версии, поэтому список
    ============================================================ */
-.lang-sw{
-  flex:none;display:inline-flex;align-items:center;gap:1px;
-  border:1px solid var(--line-2);border-radius:99px;overflow:hidden;
+.lang-sw{position:relative;flex:none}
+.lang-sw > b{
+  display:inline-flex;align-items:center;gap:6px;cursor:default;
+  height:30px;padding:0 11px;border:1px solid var(--line-2);border-radius:99px;
+  font-family:var(--ff-mono);font-weight:400;font-size:10px;letter-spacing:.12em;
+  color:var(--tx-mut);transition:color .3s var(--ease),border-color .3s var(--ease);
 }
-.lang-sw a{
-  display:grid;place-items:center;min-width:34px;height:28px;padding:0 8px;
-  font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;
-  color:var(--tx-mut);transition:color .3s var(--ease),background .3s var(--ease);
+.lang-sw > b::after{
+  content:'';width:5px;height:5px;margin-top:-2px;
+  border-right:1px solid currentColor;border-bottom:1px solid currentColor;
+  transform:rotate(45deg);opacity:.7;
 }
-.lang-sw a + a{box-shadow:inset 1px 0 0 var(--line)}
-.lang-sw a:hover{color:var(--gold);background:var(--gold-dim)}
+.lang-sw:hover > b,.lang-sw:focus-within > b{color:var(--gold);border-color:var(--gold)}
+.lang-sw ul{
+  position:absolute;top:calc(100% + 8px);right:0;z-index:60;min-width:132px;
+  padding:6px;margin:0;list-style:none;
+  background:var(--panel);border:1px solid var(--line-2);border-radius:4px;
+  box-shadow:0 18px 42px rgba(0,0,0,.5);
+  opacity:0;visibility:hidden;transform:translateY(-6px);
+  transition:opacity .28s var(--ease),transform .28s var(--ease),visibility .28s;
+}
+.lang-sw:hover ul,.lang-sw:focus-within ul{opacity:1;visibility:visible;transform:none}
+.lang-sw ul a{
+  display:flex;align-items:baseline;gap:9px;padding:8px 10px;border-radius:2px;
+  font-size:12.5px;color:var(--tx-mut);transition:color .25s,background .25s;
+}
+.lang-sw ul a span{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.1em;opacity:.65}
+.lang-sw ul a:hover{color:var(--gold);background:var(--gold-dim)}
 .hdr-side .lang-sw{margin-right:6px}
-@media (max-width:1240px){ .hdr-side .lang-sw a{min-width:30px;padding:0 6px} }
 @media (max-width:980px){ .hdr-side .lang-sw{display:none} }
 
-/* в мобильном меню — отдельной строкой рядом с телефоном */
-.mnav-foot .lang-sw a{min-width:44px;height:32px;font-size:11px}
+/* в мобильном меню — раскрытым списком, без наведения */
+.mnav-foot .lang-sw{width:100%}
+.mnav-foot .lang-sw > b{display:none}
+.mnav-foot .lang-sw ul{
+  position:static;opacity:1;visibility:visible;transform:none;
+  display:flex;flex-wrap:wrap;gap:6px;min-width:0;padding:0;background:none;
+  border:0;box-shadow:none;
+}
+.mnav-foot .lang-sw ul a{border:1px solid var(--line);border-radius:99px;padding:8px 14px}

@@ -1,0 +1,801 @@
+[
+ {
+  "name": "CAT 160K",
+  "slug": "avtogrejder-cat-160k",
+  "type": "Автогрейдер",
+  "img": "/assets/img/equipment/avtogrejder-cat-160k.webp",
+  "desc": "Операторымен және операторсыз жалдауға болады. Мобилизация мерзімі мен ауысым құны сұраныс бойынша.",
+  "specs": [
+   [
+    "Қалақ ені, мм",
+    "4300"
+   ],
+   [
+    "Қалақ биіктігі, мм",
+    "686"
+   ],
+   [
+    "Доға радиусы, мм",
+    "413"
+   ],
+   [
+    "Қалақтағы тарту күші, кг",
+    "9945"
+   ],
+   [
+    "Қалақтың топыраққа қысым күші, кг",
+    "8260"
+   ],
+   [
+    "Қозғалтқыш моделі",
+    "Cat® C7 ACERT"
+   ],
+   [
+    "Қозғалтқыш қуаты, а.к.",
+    "223"
+   ],
+   [
+    "Жұмыс көлемі, л",
+    "7,2"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/avtogrejder-cat-160k.webp"
+ },
+ {
+  "name": "DOOSAN DX 200 A",
+  "slug": "doosan-dx-200",
+  "type": "Шынжыр табанды экскаватор",
+  "img": "/assets/img/equipment/doosan-dx-200.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Doosan DB58TIS"
+   ],
+   [
+    "Ең жоғары қазу тереңдігі",
+    "6 620 mm"
+   ],
+   [
+    "Қозғалтқыш қуаты",
+    "110 kW (149 hp)"
+   ],
+   [
+    "Шөміш сыйымдылығы",
+    "0.81~0.92 m³"
+   ],
+   [
+    "Пайдалану массасы",
+    "20 500 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-200.webp"
+ },
+ {
+  "name": "DOOSAN DX 300 LCA",
+  "slug": "doosan-dx-300-lca",
+  "type": "Шынжыр табанды экскаватор",
+  "img": "/assets/img/equipment/doosan-dx-300-lca.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Doosan DE08TIS"
+   ],
+   [
+    "Ең жоғары қазу тереңдігі",
+    "7 360 mm"
+   ],
+   [
+    "Қозғалтқыш қуаты",
+    "146 kW (198 hp)"
+   ],
+   [
+    "Шөміш сыйымдылығы",
+    "0.8~1.75 m³"
+   ],
+   [
+    "Пайдалану массасы",
+    "29 300 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-300-lca.webp"
+ },
+ {
+  "name": "DOOSAN DX 340 LCA",
+  "slug": "doosan-dx-340-lca",
+  "type": "Шынжыр табанды экскаватор",
+  "img": "/assets/img/equipment/doosan-dx-340-lca.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Doosan DE12TIS"
+   ],
+   [
+    "Ең жоғары қазу тереңдігі",
+    "7 533 mm"
+   ],
+   [
+    "Қозғалтқыш қуаты",
+    "185 kW (247 hp)"
+   ],
+   [
+    "Шөміш сыйымдылығы",
+    "1.49~1.80 m³"
+   ],
+   [
+    "Пайдалану массасы",
+    "34 400 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-340-lca.webp"
+ },
+ {
+  "name": "DOOSAN DX 420 LCA-K",
+  "slug": "doosan-dx-420-lca-k",
+  "type": "Шынжыр табанды экскаватор",
+  "img": "/assets/img/equipment/doosan-dx-420-lca-k.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Doosan DX12TI"
+   ],
+   [
+    "Ең жоғары қазу тереңдігі",
+    "7 730 mm"
+   ],
+   [
+    "Қозғалтқыш қуаты",
+    "203 kW (276 hp)"
+   ],
+   [
+    "Шөміш сыйымдылығы",
+    "1.64~2.14 m³"
+   ],
+   [
+    "Пайдалану массасы",
+    "42 500 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-420-lca-k.webp"
+ },
+ {
+  "name": "Doosan DX520LC",
+  "slug": "doosan-dx520lc",
+  "type": "Шынжыр табанды экскаватор",
+  "img": "/assets/img/equipment/doosan-dx520lc.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Doosan DV11"
+   ],
+   [
+    "Пайдалану қуаты",
+    "245 kW"
+   ],
+   [
+    "Шөміш көлемі",
+    "0.92 - 3.2 m³"
+   ],
+   [
+    "Қазу тереңдігі",
+    "6770 mm"
+   ],
+   [
+    "Пайдалану массасы",
+    "50700 kg"
+   ],
+   [
+    "Қозғалыс жылдамдығы",
+    "5,0 / 3,1 km/h"
+   ],
+   [
+    "Толық ұзындығы",
+    "11430 mm"
+   ],
+   [
+    "Толық ені",
+    "3900 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx520lc.webp"
+ },
+ {
+  "name": "Doosan DX190WA",
+  "slug": "doosan-dx190wa",
+  "type": "Дөңгелекті экскаватор",
+  "img": "/assets/img/equipment/doosan-dx190wa.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx190wa.webp"
+ },
+ {
+  "name": "Doosan DX140W",
+  "slug": "doosan-dx140w",
+  "type": "Дөңгелекті экскаватор",
+  "img": "/assets/img/equipment/doosan-dx140w.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қуаты",
+    "99 kW"
+   ],
+   [
+    "Пайдалану массасы",
+    "13750-15560 kg"
+   ],
+   [
+    "Шөміш көлемі",
+    "0.24-0.76 m³"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx140w.webp"
+ },
+ {
+  "name": "Cat 444 F2",
+  "slug": "cat-444-f2",
+  "type": "Экскаватор-тиегіш",
+  "img": "/assets/img/equipment/cat-444-f2.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Пайдалы қуат",
+    "96 hp/71 kW"
+   ],
+   [
+    "Пайдалану массасы, атаулы",
+    "8 425 kg"
+   ],
+   [
+    "Пайдалану массасы, ең жоғары",
+    "11 086 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/cat-444-f2.webp"
+ },
+ {
+  "name": "428F2 Caterpillar",
+  "slug": "428f2-caterpillar",
+  "type": "Экскаватор-тиегіш",
+  "img": "/assets/img/equipment/428f2-caterpillar.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Экскаватор",
+    "тиегіш, үзу күші 4 кН"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/428f2-caterpillar.webp"
+ },
+ {
+  "name": "DL420A Doosan",
+  "slug": "dl420a-doosan",
+  "type": "Экскаватор-тиегіш",
+  "img": "/assets/img/equipment/dl420a-doosan.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Саны",
+    "6 цилиндр"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/dl420a-doosan.webp"
+ },
+ {
+  "name": "Doosan SD300",
+  "slug": "doosan-sd300",
+  "type": "Фронтальды тиегіш",
+  "img": "/assets/img/equipment/doosan-sd300.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Массасы",
+    "16.85 t"
+   ],
+   [
+    "Жүк көтергіштігі",
+    "5 t"
+   ],
+   [
+    "Стандартты шөміш сыйымдылығы",
+    "3 м³"
+   ],
+   [
+    "Шөміштің үзу күші",
+    "161 kN"
+   ],
+   [
+    "Шекті түсіру биіктігі",
+    "3.13 m"
+   ],
+   [
+    "Шекті түсіру ұзындығы",
+    "1.22 m"
+   ],
+   [
+    "Шекті жылдамдық",
+    "38 km/h"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-sd300.webp"
+ },
+ {
+  "name": "Doosan DL550",
+  "slug": "doosan-dl550",
+  "type": "Экскаватор-тиегіш",
+  "img": "/assets/img/equipment/doosan-dl550.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Scania"
+   ],
+   [
+    "Моделі",
+    "DC13"
+   ],
+   [
+    "Қозғалтқыш көлемі",
+    "12700 cc"
+   ],
+   [
+    "Қуаты, айн/мин",
+    "394 hp"
+   ],
+   [
+    "Жұмыс салмағы",
+    "31125 kg"
+   ],
+   [
+    "Түсіру биіктігі, шөміш 45°",
+    "3285 mm"
+   ],
+   [
+    "Түсіру ұзындығы, шөміш 45°",
+    "1535 mm"
+   ],
+   [
+    "Шөміш топсасының биіктігі",
+    "4795 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dl550.webp"
+ },
+ {
+  "name": "LiuGong 856",
+  "slug": "liugong-856",
+  "type": "Экскаватор-тиегіш",
+  "img": "/assets/img/equipment/liugong-856.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/liugong-856.webp"
+ },
+ {
+  "name": "HOWO 371, 25 т",
+  "slug": "howo-371-25-tonn",
+  "type": "Өзі аударғыш",
+  "img": "/assets/img/equipment/howo-371-25-tonn.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Отын",
+    "дизель отыны"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/howo-371-25-tonn.webp"
+ },
+ {
+  "name": "FOTON, 15 м³",
+  "slug": "foton-15-kubov",
+  "type": "Су таситын машина",
+  "img": "/assets/img/equipment/foton-15-kubov.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Габаритті ұзындығы",
+    "7065/7130"
+   ],
+   [
+    "Отын",
+    "дизель отыны"
+   ],
+   [
+    "Габаритті ұзындығы, мм",
+    "7065/7130"
+   ],
+   [
+    "Габаритті ені, мм",
+    "2160"
+   ],
+   [
+    "Габаритті биіктігі, мм",
+    "2480"
+   ],
+   [
+    "Атаулы жүк көтергіштігі, кг",
+    "6545"
+   ],
+   [
+    "Жарақталған массасы, кг",
+    "5250"
+   ],
+   [
+    "Толық массасы, кг",
+    "11990"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/foton-15-kubov.webp"
+ },
+ {
+  "name": "Foton Auman HFV5120GSSBJ4",
+  "slug": "foton-auman-hfv5120gssbj4",
+  "type": "Су цистернасының қозғалтқышы",
+  "img": "/assets/img/equipment/foton-auman-hfv5120gssbj4.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Габаритті ұзындығы, мм",
+    "7065/7130"
+   ],
+   [
+    "Габаритті ені, мм",
+    "2160"
+   ],
+   [
+    "Габаритті биіктігі, мм",
+    "2480"
+   ],
+   [
+    "Атаулы жүк көтергіштігі, кг",
+    "6545"
+   ],
+   [
+    "Жарақталған массасы, кг",
+    "5250"
+   ],
+   [
+    "Толық массасы, кг",
+    "11990"
+   ],
+   [
+    "Толық массаның осьтерге таралуы, кг",
+    "4200/7790"
+   ],
+   [
+    "Дөңгелек базасы, мм",
+    "3800"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/foton-auman-hfv5120gssbj4.webp"
+ },
+ {
+  "name": "Liu Gong CLG4180",
+  "slug": "liu-gong-clg4180",
+  "type": "Автогрейдер",
+  "img": "/assets/img/equipment/liu-gong-clg4180.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Cummins 6BTAA5.9"
+   ],
+   [
+    "Толық қуат",
+    "142 kW"
+   ],
+   [
+    "Пайдалы қуат",
+    "128 kW"
+   ],
+   [
+    "Пайдалану массасы",
+    "15500 kg"
+   ],
+   [
+    "Қалақ ені",
+    "3960 mm"
+   ],
+   [
+    "Ең жоғары жылдамдық",
+    "42 km/h"
+   ],
+   [
+    "Тарту күші",
+    "86 kN"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/liu-gong-clg4180.webp"
+ },
+ {
+  "name": "LiuGong 4165D",
+  "slug": "liugong-4165d",
+  "type": "Автогрейдер",
+  "img": "/assets/img/equipment/liugong-4165d.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Пайдалану массасы",
+    "15000 kg."
+   ],
+   [
+    "Қозғалтқыш",
+    "Cummins 6BTAA5.9"
+   ],
+   [
+    "Қуаты",
+    "170 hp"
+   ],
+   [
+    "Қалақ ені",
+    "3660 mm."
+   ],
+   [
+    "Тарту күші",
+    "82 kN"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/liugong-4165d.webp"
+ },
+ {
+  "name": "LiuGong CLG 4215D",
+  "slug": "liugong-clg-4215d",
+  "type": "Автогрейдер",
+  "img": "/assets/img/equipment/liugong-clg-4215d.webp",
+  "desc": "Операторымен және операторсыз жалдауға болады. Мобилизация мерзімі мен ауысым құны сұраныс бойынша.",
+  "specs": [
+   [
+    "Қозғалтқыш",
+    "Cummins 6CTAA8,3"
+   ],
+   [
+    "Атаулы қуат",
+    "160 kW (215 hp) at 2200 rpm"
+   ],
+   [
+    "Тиімді қуат",
+    "144 kW (193 hp) at 2200 rpm"
+   ],
+   [
+    "Қалақ ені",
+    "4270 mm"
+   ],
+   [
+    "Ең жоғары жылдамдық",
+    "42 km/h"
+   ],
+   [
+    "Тарту күші",
+    "120 kN"
+   ],
+   [
+    "Пайдалану массасы",
+    "16 500 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/liugong-clg-4215d.webp"
+ },
+ {
+  "name": "CS78B Caterpillar",
+  "slug": "cs78b-caterpillar",
+  "type": "Топырақ катогы",
+  "img": "/assets/img/equipment/cs78b-caterpillar.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/cs78b-caterpillar.webp"
+ },
+ {
+  "name": "CAT 74 B, 2021",
+  "slug": "cat-74-b-2021-god",
+  "type": "Топырақ катогы",
+  "img": "/assets/img/equipment/cat-74-b-2021-god.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/cat-74-b-2021-god.webp"
+ },
+ {
+  "name": "CAT D6R2",
+  "slug": "cat-d6r2",
+  "type": "Шынжыр табанды бульдозер",
+  "img": "/assets/img/equipment/cat-d6r2.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Қозғалтқыш қуаты, ең жоғары",
+    "ISO 14396166.0 kW"
+   ],
+   [
+    "Пайдалы қуат, атаулы",
+    "80/1269/EEC148.0 kW"
+   ],
+   [
+    "Пайдалану массасы",
+    "LGP21661.0 kg"
+   ],
+   [
+    "Тасымалдау",
+    "D6R216209.0 kg"
+   ],
+   [
+    "Пайдалану",
+    "D6R2 (A)19448.0 kg"
+   ],
+   [
+    "Ең жоғары жұмыс қысымы",
+    "қалақ еңкею гидроцилиндрі, 19 300 кПа"
+   ],
+   [
+    "Пайдалы қуат, ең жоғары",
+    "ISO 9249/SAE J1349 (DIN)141.0 kW"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/cat-d6r2.webp"
+ },
+ {
+  "name": "Shantui SD32",
+  "slug": "shantui-sd32",
+  "type": "Бульдозер",
+  "img": "/assets/img/equipment/shantui-sd32.webp",
+  "desc": "Операторымен және операторсыз жалдауға болады. Мобилизация мерзімі мен ауысым құны сұраныс бойынша.",
+  "specs": [
+   [
+    "Ұзындығы",
+    "6.88 m"
+   ],
+   [
+    "Ені",
+    "4.03 m"
+   ],
+   [
+    "Биіктігі",
+    "3.73 m"
+   ],
+   [
+    "Шынжыр табан ені",
+    "2.14 m"
+   ],
+   [
+    "Жол саңылауы",
+    "0.5 m"
+   ],
+   [
+    "Ең кіші бұрылыс радиусы",
+    "3.8 m"
+   ],
+   [
+    "Шекті жұмыс бұрышы",
+    "30°"
+   ],
+   [
+    "Салмағы",
+    "37.2 t"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/shantui-sd32.webp"
+ },
+ {
+  "name": "Shantui SD23",
+  "slug": "shantui-sd23",
+  "type": "Бульдозер",
+  "img": "/assets/img/equipment/shantui-sd23.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Ұзындығы",
+    "4200 mm"
+   ],
+   [
+    "Ені",
+    "2680 mm"
+   ],
+   [
+    "Биіктігі",
+    "3390 mm"
+   ],
+   [
+    "Қалақ пен қопсытқышпен ұзындығы",
+    "7180 mm"
+   ],
+   [
+    "Қалақ пен қопсытқышпен ені",
+    "4390 mm"
+   ],
+   [
+    "Жол саңылауы",
+    "405 mm"
+   ],
+   [
+    "Шынжыр табан ені",
+    "2000 mm"
+   ],
+   [
+    "Ең кіші бұрылыс радиусы",
+    "3300 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/shantui-sd23.webp"
+ },
+ {
+  "name": "SHANTUI SD 16",
+  "slug": "sd-16",
+  "type": "Бульдозер",
+  "img": "/assets/img/equipment/sd-16.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Параметр",
+    "Мәні"
+   ],
+   [
+    "Массасы",
+    "14500 — 18000 kg"
+   ],
+   [
+    "Топыраққа қысым",
+    "0.027 — 0.067 MPa"
+   ],
+   [
+    "Жол саңылауы",
+    "400 — 495 mm"
+   ],
+   [
+    "Бұрылыс радиусы",
+    "4500 — 4900 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/sd-16.webp"
+ },
+ {
+  "name": "Doosan DX210WA",
+  "slug": "doosan-dx210wa",
+  "type": "Дөңгелекті экскаватор",
+  "img": "/assets/img/equipment/doosan-dx210wa.webp",
+  "desc": "Операторымен және операторсыз жалдауға болады. Мобилизация мерзімі мен ауысым құны сұраныс бойынша.",
+  "specs": [
+   [
+    "Пайдалану массасы",
+    "20.8 t"
+   ],
+   [
+    "Шөміш сыйымдылығы",
+    "0.86 m³"
+   ],
+   [
+    "Қозғалтқыштың атаулы қуаты",
+    "120 kW"
+   ],
+   [
+    "Шөміштегі қазу күші",
+    "13.4 t"
+   ],
+   [
+    "Тұтқадағы қазу күші",
+    "9.9 t"
+   ],
+   [
+    "Ең жоғары қазу радиусы",
+    "10000 mm"
+   ],
+   [
+    "Ең жоғары қазу тереңдігі",
+    "6255 mm"
+   ],
+   [
+    "Ең жоғары қазу биіктігі",
+    "10050 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx210wa.webp"
+ },
+ {
+  "name": "CAT 432 F2",
+  "slug": "cat-432-f2",
+  "type": "Экскаватор-тиегіш",
+  "img": "/assets/img/equipment/cat-432-f2.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/cat-432-f2.webp"
+ }
+]

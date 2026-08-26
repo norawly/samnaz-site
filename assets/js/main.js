@@ -9,7 +9,7 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var EQ = null; // кэш каталога техники
-  var LANG = { en: 'en', tr: 'tr' }[(document.documentElement.lang || 'ru').slice(0, 2)] || 'ru';
+  var LANG = { en: 'en', tr: 'tr', kk: 'kk' }[(document.documentElement.lang || 'ru').slice(0, 2)] || 'ru';
 
   /* Строки, которые собираются скриптом. Всё остальное лежит в разметке. */
   var T = {
@@ -64,6 +64,23 @@
       sent:    'Teşekkürler. Talebiniz iletildi — en kısa sürede sizinle iletişime geçeceğiz.',
       queued:  'Teşekkürler. Talebiniz alındı. Acil durumlar için: +7 777 833-22-67',
       failed:  'Gönderilemedi. Lütfen bizi arayın: +7 777 833-22-67'
+    },
+    kk: {
+      swipe:     'Бүйірге сырғытыңыз →',
+      onRequest: 'Сипаттамасы сұраныс бойынша',
+      openCard:  'Картаны ашу →',
+      allEquip:  'Барлық техника',
+      loadFail:  'Каталог жүктелмеді. Бетті жаңартыңыз — көмектеспесе, бізге жазыңыз.',
+      rentBlurb: 'Операторымен және операторсыз жалдауға болады. Мобилизация мерзімі мен ауысым құны сұраныс бойынша.',
+      askPrice:  'Құн сұрау',
+      specs:     'Техникалық сипаттамалары',
+      byRequest: 'сұраныс бойынша',
+      fName: 'Аты', fPhone: 'Телефон', fMail: 'E-mail', fCompany: 'Компания', fTech: 'Техника',
+      leadHead: '🟡 Сайттан жаңа өтінім', task: 'Міндет:', page: 'Бет: ', time: 'Уақыт: ',
+      already: 'Өтінім жіберілген. Шұғыл болса, қоңырау шалыңыз: +7 777 833-22-67',
+      sent:    'Рақмет! Өтінім жіберілді — жақын арада сізбен хабарласамыз.',
+      queued:  'Рақмет! Өтінім қабылданды. Шұғыл байланыс: +7 777 833-22-67',
+      failed:  'Жіберілмеді. Бізге қоңырау шалыңыз: +7 777 833-22-67'
     }
   }[LANG];
 
@@ -303,7 +320,7 @@
     if (!grid) return;
     var limit = parseInt(grid.dataset.limit || '0', 10);
 
-    fetch('/assets/data/equipment' + (LANG === 'ru' ? '' : '.' + LANG) + '.json?v=31')
+    fetch('/assets/data/equipment' + (LANG === 'ru' ? '' : '.' + LANG) + '.json?v=33')
       .then(function (r) { return r.json(); })
       .then(function (list) {
         EQ = list;
