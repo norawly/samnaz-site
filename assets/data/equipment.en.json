@@ -1,0 +1,801 @@
+[
+ {
+  "name": "CAT 160K",
+  "slug": "avtogrejder-cat-160k",
+  "type": "Motor grader",
+  "img": "/assets/img/equipment/avtogrejder-cat-160k.webp",
+  "desc": "Available for rent with or without an operator. Mobilisation times and shift rates on request.",
+  "specs": [
+   [
+    "Blade width, mm",
+    "4300"
+   ],
+   [
+    "Blade height, mm",
+    "686"
+   ],
+   [
+    "Arc radius, mm",
+    "413"
+   ],
+   [
+    "Blade tractive force, kg",
+    "9945"
+   ],
+   [
+    "Blade down-force, kg",
+    "8260"
+   ],
+   [
+    "Engine model",
+    "Cat® C7 ACERT"
+   ],
+   [
+    "Engine power, hp",
+    "223"
+   ],
+   [
+    "Displacement, l",
+    "7,2"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/avtogrejder-cat-160k.webp"
+ },
+ {
+  "name": "DOOSAN DX 200 A",
+  "slug": "doosan-dx-200",
+  "type": "Crawler excavator",
+  "img": "/assets/img/equipment/doosan-dx-200.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine",
+    "Doosan DB58TIS"
+   ],
+   [
+    "Max digging depth",
+    "6 620 mm"
+   ],
+   [
+    "Engine power",
+    "110 kW (149 hp)"
+   ],
+   [
+    "Bucket capacity",
+    "0.81~0.92 m³"
+   ],
+   [
+    "Operating weight",
+    "20 500 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-200.webp"
+ },
+ {
+  "name": "DOOSAN DX 300 LCA",
+  "slug": "doosan-dx-300-lca",
+  "type": "Crawler excavator",
+  "img": "/assets/img/equipment/doosan-dx-300-lca.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine",
+    "Doosan DE08TIS"
+   ],
+   [
+    "Max digging depth",
+    "7 360 mm"
+   ],
+   [
+    "Engine power",
+    "146 kW (198 hp)"
+   ],
+   [
+    "Bucket capacity",
+    "0.8~1.75 m³"
+   ],
+   [
+    "Operating weight",
+    "29 300 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-300-lca.webp"
+ },
+ {
+  "name": "DOOSAN DX 340 LCA",
+  "slug": "doosan-dx-340-lca",
+  "type": "Crawler excavator",
+  "img": "/assets/img/equipment/doosan-dx-340-lca.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine",
+    "Doosan DE12TIS"
+   ],
+   [
+    "Max digging depth",
+    "7 533 mm"
+   ],
+   [
+    "Engine power",
+    "185 kW (247 hp)"
+   ],
+   [
+    "Bucket capacity",
+    "1.49~1.80 m³"
+   ],
+   [
+    "Operating weight",
+    "34 400 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-340-lca.webp"
+ },
+ {
+  "name": "DOOSAN DX 420 LCA-K",
+  "slug": "doosan-dx-420-lca-k",
+  "type": "Crawler excavator",
+  "img": "/assets/img/equipment/doosan-dx-420-lca-k.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine",
+    "Doosan DX12TI"
+   ],
+   [
+    "Max digging depth",
+    "7 730 mm"
+   ],
+   [
+    "Engine power",
+    "203 kW (276 hp)"
+   ],
+   [
+    "Bucket capacity",
+    "1.64~2.14 m³"
+   ],
+   [
+    "Operating weight",
+    "42 500 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx-420-lca-k.webp"
+ },
+ {
+  "name": "Doosan DX520LC",
+  "slug": "doosan-dx520lc",
+  "type": "Crawler excavator",
+  "img": "/assets/img/equipment/doosan-dx520lc.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine",
+    "Doosan DV11"
+   ],
+   [
+    "Operating power",
+    "245 kW"
+   ],
+   [
+    "Bucket capacity",
+    "0.92 - 3.2 m³"
+   ],
+   [
+    "Digging depth",
+    "6770 mm"
+   ],
+   [
+    "Operating weight",
+    "50700 kg"
+   ],
+   [
+    "Travel speed",
+    "5,0 / 3,1 km/h"
+   ],
+   [
+    "Overall length",
+    "11430 mm"
+   ],
+   [
+    "Overall width",
+    "3900 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx520lc.webp"
+ },
+ {
+  "name": "Doosan DX190WA",
+  "slug": "doosan-dx190wa",
+  "type": "Wheeled excavator",
+  "img": "/assets/img/equipment/doosan-dx190wa.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx190wa.webp"
+ },
+ {
+  "name": "Doosan DX140W",
+  "slug": "doosan-dx140w",
+  "type": "Wheeled excavator",
+  "img": "/assets/img/equipment/doosan-dx140w.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Power",
+    "99 kW"
+   ],
+   [
+    "Operating weight",
+    "13750-15560 kg"
+   ],
+   [
+    "Bucket capacity",
+    "0.24-0.76 m³"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx140w.webp"
+ },
+ {
+  "name": "Cat 444 F2",
+  "slug": "cat-444-f2",
+  "type": "Backhoe loader",
+  "img": "/assets/img/equipment/cat-444-f2.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Net power",
+    "96 hp/71 kW"
+   ],
+   [
+    "Operating weight, nominal",
+    "8 425 kg"
+   ],
+   [
+    "Operating weight, max",
+    "11 086 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/cat-444-f2.webp"
+ },
+ {
+  "name": "428F2 Caterpillar",
+  "slug": "428f2-caterpillar",
+  "type": "Backhoe loader",
+  "img": "/assets/img/equipment/428f2-caterpillar.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Excavator",
+    "loader, 4 kN breakout force"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/428f2-caterpillar.webp"
+ },
+ {
+  "name": "DL420A Doosan",
+  "slug": "dl420a-doosan",
+  "type": "Backhoe loader",
+  "img": "/assets/img/equipment/dl420a-doosan.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Qty",
+    "6 cylinders"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/dl420a-doosan.webp"
+ },
+ {
+  "name": "Doosan SD300",
+  "slug": "doosan-sd300",
+  "type": "Front loader",
+  "img": "/assets/img/equipment/doosan-sd300.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Weight",
+    "16.85 t"
+   ],
+   [
+    "Payload",
+    "5 t"
+   ],
+   [
+    "Standard bucket capacity",
+    "3 m³"
+   ],
+   [
+    "Bucket breakout force",
+    "161 kN"
+   ],
+   [
+    "Max dump height",
+    "3.13 m"
+   ],
+   [
+    "Max dump reach",
+    "1.22 m"
+   ],
+   [
+    "Max speed",
+    "38 km/h"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-sd300.webp"
+ },
+ {
+  "name": "Doosan DL550",
+  "slug": "doosan-dl550",
+  "type": "Backhoe loader",
+  "img": "/assets/img/equipment/doosan-dl550.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine",
+    "Scania"
+   ],
+   [
+    "Model",
+    "DC13"
+   ],
+   [
+    "Engine displacement",
+    "12700 cc"
+   ],
+   [
+    "Power at rpm",
+    "394 hp"
+   ],
+   [
+    "Operating weight",
+    "31125 kg"
+   ],
+   [
+    "Dump height, bucket at 45°",
+    "3285 mm"
+   ],
+   [
+    "Dump reach, bucket at 45°",
+    "1535 mm"
+   ],
+   [
+    "Height to bucket hinge",
+    "4795 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dl550.webp"
+ },
+ {
+  "name": "LiuGong 856",
+  "slug": "liugong-856",
+  "type": "Backhoe loader",
+  "img": "/assets/img/equipment/liugong-856.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/liugong-856.webp"
+ },
+ {
+  "name": "HOWO 371, 25 t",
+  "slug": "howo-371-25-tonn",
+  "type": "Dump truck",
+  "img": "/assets/img/equipment/howo-371-25-tonn.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Fuel",
+    "diesel"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/howo-371-25-tonn.webp"
+ },
+ {
+  "name": "FOTON, 15 m³",
+  "slug": "foton-15-kubov",
+  "type": "Water truck",
+  "img": "/assets/img/equipment/foton-15-kubov.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Overall length",
+    "7065/7130"
+   ],
+   [
+    "Fuel",
+    "diesel"
+   ],
+   [
+    "Overall length, mm",
+    "7065/7130"
+   ],
+   [
+    "Overall width, mm",
+    "2160"
+   ],
+   [
+    "Overall height, mm",
+    "2480"
+   ],
+   [
+    "Rated payload, kg",
+    "6545"
+   ],
+   [
+    "Kerb weight, kg",
+    "5250"
+   ],
+   [
+    "Gross weight, kg",
+    "11990"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/foton-15-kubov.webp"
+ },
+ {
+  "name": "Foton Auman HFV5120GSSBJ4",
+  "slug": "foton-auman-hfv5120gssbj4",
+  "type": "Water tanker engine",
+  "img": "/assets/img/equipment/foton-auman-hfv5120gssbj4.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Overall length, mm",
+    "7065/7130"
+   ],
+   [
+    "Overall width, mm",
+    "2160"
+   ],
+   [
+    "Overall height, mm",
+    "2480"
+   ],
+   [
+    "Rated payload, kg",
+    "6545"
+   ],
+   [
+    "Kerb weight, kg",
+    "5250"
+   ],
+   [
+    "Gross weight, kg",
+    "11990"
+   ],
+   [
+    "Gross weight per axle, kg",
+    "4200/7790"
+   ],
+   [
+    "Wheelbase, mm",
+    "3800"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/foton-auman-hfv5120gssbj4.webp"
+ },
+ {
+  "name": "Liu Gong CLG4180",
+  "slug": "liu-gong-clg4180",
+  "type": "Motor grader",
+  "img": "/assets/img/equipment/liu-gong-clg4180.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine",
+    "Cummins 6BTAA5.9"
+   ],
+   [
+    "Gross power",
+    "142 kW"
+   ],
+   [
+    "Net power",
+    "128 kW"
+   ],
+   [
+    "Operating weight",
+    "15500 kg"
+   ],
+   [
+    "Blade width",
+    "3960 mm"
+   ],
+   [
+    "Max speed",
+    "42 km/h"
+   ],
+   [
+    "Tractive force",
+    "86 kN"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/liu-gong-clg4180.webp"
+ },
+ {
+  "name": "LiuGong 4165D",
+  "slug": "liugong-4165d",
+  "type": "Motor grader",
+  "img": "/assets/img/equipment/liugong-4165d.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Operating weight",
+    "15000 kg."
+   ],
+   [
+    "Engine",
+    "Cummins 6BTAA5.9"
+   ],
+   [
+    "Power",
+    "170 hp"
+   ],
+   [
+    "Blade width",
+    "3660 mm."
+   ],
+   [
+    "Tractive force",
+    "82 kN"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/liugong-4165d.webp"
+ },
+ {
+  "name": "LiuGong CLG 4215D",
+  "slug": "liugong-clg-4215d",
+  "type": "Motor grader",
+  "img": "/assets/img/equipment/liugong-clg-4215d.webp",
+  "desc": "Available for rent with or without an operator. Mobilisation times and shift rates on request.",
+  "specs": [
+   [
+    "Engine",
+    "Cummins 6CTAA8,3"
+   ],
+   [
+    "Rated power",
+    "160 kW (215 hp) at 2200 rpm"
+   ],
+   [
+    "Effective power",
+    "144 kW (193 hp) at 2200 rpm"
+   ],
+   [
+    "Blade width",
+    "4270 mm"
+   ],
+   [
+    "Max speed",
+    "42 km/h"
+   ],
+   [
+    "Tractive force",
+    "120 kN"
+   ],
+   [
+    "Operating weight",
+    "16 500 kg"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/liugong-clg-4215d.webp"
+ },
+ {
+  "name": "CS78B Caterpillar",
+  "slug": "cs78b-caterpillar",
+  "type": "Soil compactor",
+  "img": "/assets/img/equipment/cs78b-caterpillar.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/cs78b-caterpillar.webp"
+ },
+ {
+  "name": "CAT 74 B, 2021",
+  "slug": "cat-74-b-2021-god",
+  "type": "Soil compactor",
+  "img": "/assets/img/equipment/cat-74-b-2021-god.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/cat-74-b-2021-god.webp"
+ },
+ {
+  "name": "CAT D6R2",
+  "slug": "cat-d6r2",
+  "type": "Crawler bulldozer",
+  "img": "/assets/img/equipment/cat-d6r2.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Engine power, max",
+    "ISO 14396166.0 kW"
+   ],
+   [
+    "Net power, nominal",
+    "80/1269/EEC148.0 kW"
+   ],
+   [
+    "Operating weight",
+    "LGP21661.0 kg"
+   ],
+   [
+    "Transport",
+    "D6R216209.0 kg"
+   ],
+   [
+    "Operating",
+    "D6R2 (A)19448.0 kg"
+   ],
+   [
+    "Max working pressure",
+    "blade tilt cylinder, 19 300 kPa"
+   ],
+   [
+    "Net power, max",
+    "ISO 9249/SAE J1349 (DIN)141.0 kW"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/cat-d6r2.webp"
+ },
+ {
+  "name": "Shantui SD32",
+  "slug": "shantui-sd32",
+  "type": "Bulldozer",
+  "img": "/assets/img/equipment/shantui-sd32.webp",
+  "desc": "Available for rent with or without an operator. Mobilisation times and shift rates on request.",
+  "specs": [
+   [
+    "Length",
+    "6.88 m"
+   ],
+   [
+    "Width",
+    "4.03 m"
+   ],
+   [
+    "Height",
+    "3.73 m"
+   ],
+   [
+    "Track gauge",
+    "2.14 m"
+   ],
+   [
+    "Ground clearance",
+    "0.5 m"
+   ],
+   [
+    "Min turning radius",
+    "3.8 m"
+   ],
+   [
+    "Max working angle",
+    "30°"
+   ],
+   [
+    "Weight",
+    "37.2 t"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/shantui-sd32.webp"
+ },
+ {
+  "name": "Shantui SD23",
+  "slug": "shantui-sd23",
+  "type": "Bulldozer",
+  "img": "/assets/img/equipment/shantui-sd23.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Length",
+    "4200 mm"
+   ],
+   [
+    "Width",
+    "2680 mm"
+   ],
+   [
+    "Height",
+    "3390 mm"
+   ],
+   [
+    "Length with blade and ripper",
+    "7180 mm"
+   ],
+   [
+    "Width with blade and ripper",
+    "4390 mm"
+   ],
+   [
+    "Ground clearance",
+    "405 mm"
+   ],
+   [
+    "Track gauge",
+    "2000 mm"
+   ],
+   [
+    "Min turning radius",
+    "3300 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/shantui-sd23.webp"
+ },
+ {
+  "name": "SHANTUI SD 16",
+  "slug": "sd-16",
+  "type": "Bulldozer",
+  "img": "/assets/img/equipment/sd-16.webp",
+  "desc": "",
+  "specs": [
+   [
+    "Parameter",
+    "Value"
+   ],
+   [
+    "Weight",
+    "14500 — 18000 kg"
+   ],
+   [
+    "Ground pressure",
+    "0.027 — 0.067 MPa"
+   ],
+   [
+    "Ground clearance",
+    "400 — 495 mm"
+   ],
+   [
+    "Turning radius",
+    "4500 — 4900 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/sd-16.webp"
+ },
+ {
+  "name": "Doosan DX210WA",
+  "slug": "doosan-dx210wa",
+  "type": "Wheeled excavator",
+  "img": "/assets/img/equipment/doosan-dx210wa.webp",
+  "desc": "Available for rent with or without an operator. Mobilisation times and shift rates on request.",
+  "specs": [
+   [
+    "Operating weight",
+    "20.8 t"
+   ],
+   [
+    "Bucket capacity",
+    "0.86 m³"
+   ],
+   [
+    "Rated engine power",
+    "120 kW"
+   ],
+   [
+    "Bucket digging force",
+    "13.4 t"
+   ],
+   [
+    "Arm digging force",
+    "9.9 t"
+   ],
+   [
+    "Max digging radius",
+    "10000 mm"
+   ],
+   [
+    "Max digging depth",
+    "6255 mm"
+   ],
+   [
+    "Max digging height",
+    "10050 mm"
+   ]
+  ],
+  "imgLg": "/assets/img/equipment/lg/doosan-dx210wa.webp"
+ },
+ {
+  "name": "CAT 432 F2",
+  "slug": "cat-432-f2",
+  "type": "Backhoe loader",
+  "img": "/assets/img/equipment/cat-432-f2.webp",
+  "desc": "",
+  "specs": [],
+  "imgLg": "/assets/img/equipment/lg/cat-432-f2.webp"
+ }
+]

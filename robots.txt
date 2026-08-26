@@ -4,5 +4,6 @@ Allow: /
 # служебное — в индекс не нужно
 Disallow: /bot/
 Disallow: /_unused/
+Disallow: /.dev/
 
 Sitemap: https://samnaz.group/sitemap.xml
