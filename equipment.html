@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://samnaz.group/equipment">
 <link rel="alternate" hreflang="ru" href="https://samnaz.group/equipment">
 <link rel="alternate" hreflang="en" href="https://samnaz.group/en/equipment">
+<link rel="alternate" hreflang="tr" href="https://samnaz.group/tr/equipment">
 <link rel="alternate" hreflang="x-default" href="https://samnaz.group/equipment">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="SAMNAZ ENGINEERING">
@@ -32,7 +33,10 @@
   "@id": "https://samnaz.group/#organization",
   "name": "SAMNAZ ENGINEERING",
   "legalName": "ТОО «SAM-NAZ Инжиниринг»",
-  "alternateName": ["САМНАЗ Инжиниринг", "SAM NAZ ENGINEERING"],
+  "alternateName": [
+    "САМНАЗ Инжиниринг",
+    "SAM NAZ ENGINEERING"
+  ],
   "url": "https://samnaz.group/",
   "logo": "https://samnaz.group/assets/img/brand/logo-full.png",
   "image": "https://samnaz.group/assets/img/og-cover.jpg",
@@ -47,15 +51,96 @@
     "addressRegion": "Есильский район",
     "addressCountry": "KZ"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 51.123548, "longitude": 71.431394 },
-  "areaServed": { "@type": "Country", "name": "Казахстан" },
-  "knowsLanguage": ["ru", "kk"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.123548,
+    "longitude": 71.431394
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Казахстан"
+  },
+  "knowsLanguage": [
+    "ru",
+    "kk"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "hasMap": "https://go.2gis.com/MWC5t",
+  "priceRange": "$$",
+  "currenciesAccepted": "KZT",
+  "paymentAccepted": "Безналичный расчёт",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "minValue": 20
+  },
+  "slogan": "Строим инфраструктуру которая держит страну",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+7-777-833-22-67",
+      "contactType": "sales",
+      "email": "samnazengineering@gmail.com",
+      "availableLanguage": [
+        "ru",
+        "kk",
+        "en",
+        "tr"
+      ],
+      "areaServed": "KZ"
+    }
+  ],
+  "sameAs": [
+    "https://go.2gis.com/MWC5t"
+  ],
   "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Строительство и ремонт дорог" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Мосты и монолитные здания" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Водопроводные и канализационные сети" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Земляные работы" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Аренда строительной спецтехники" } }
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Строительство и ремонт дорог"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Мосты и монолитные здания"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Водопроводные и канализационные сети"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Земляные работы"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Аренда строительной спецтехники"
+      }
+    }
   ]
 }
 </script>
@@ -73,8 +158,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/brand/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/brand/favicon.png">
-<script src="/assets/js/lang.js?v=30"></script>
-<link rel="stylesheet" href="assets/css/main.css?v=30">
+<script src="/assets/js/lang.js?v=32"></script>
+<link rel="stylesheet" href="assets/css/main.css?v=32">
 </head>
 <body>
 
@@ -89,7 +174,7 @@
       </a>
       <nav class="nav"><a href="about">О компании</a><a href="services">Услуги</a><a href="projects">Проекты</a><a href="equipment">Техника</a><a href="contacts">Контакты</a></nav>
       <div class="hdr-side">
-        <a class="lang-sw" href="/en/equipment" hreflang="en" lang="en" data-lang="en" aria-label="Switch to English">ENG</a>
+        <div class="lang-sw" role="group" aria-label="Язык сайта"><a href="/en/equipment" hreflang="en" lang="en" data-lang="en">EN</a><a href="/tr/equipment" hreflang="tr" lang="tr" data-lang="tr">TR</a></div>
         <a class="hdr-tel" href="tel:+77778332267">+7 777 833-22-67</a>
         <a class="btn btn-gold" href="#request" style="padding:13px 20px">Запросить технику</a>
         <button class="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
@@ -103,7 +188,7 @@
   <a href="projects">Проекты</a><a href="equipment">Техника</a><a href="contacts">Контакты</a>
   
   <a class="btn btn-gold mnav-cta" href="#request">Запросить технику<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  <div class="mnav-foot"><a class="lang-sw" href="/en/equipment" hreflang="en" lang="en" data-lang="en" aria-label="Switch to English">ENG</a><a href="tel:+77778332267">+7 777 833-22-67</a><a href="mailto:samnazengineering@gmail.com">samnazengineering@gmail.com</a></div>
+  <div class="mnav-foot"><div class="lang-sw" role="group" aria-label="Язык сайта"><a href="/en/equipment" hreflang="en" lang="en" data-lang="en">EN</a><a href="/tr/equipment" hreflang="tr" lang="tr" data-lang="tr">TR</a></div><a href="tel:+77778332267">+7 777 833-22-67</a><a href="mailto:samnazengineering@gmail.com">samnazengineering@gmail.com</a></div>
 </div>
 
 <main>
@@ -299,8 +384,8 @@
   </div>
 </footer>
 
-<script src="assets/js/vendor/metrics.js?v=30"></script>
-<script src="assets/js/config.js?v=30"></script>
-<script src="assets/js/main.js?v=30"></script>
+<script src="assets/js/vendor/metrics.js?v=32"></script>
+<script src="assets/js/config.js?v=32"></script>
+<script src="assets/js/main.js?v=32"></script>
 </body>
 </html>

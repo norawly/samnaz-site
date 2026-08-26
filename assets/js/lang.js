@@ -9,8 +9,8 @@
       задержки и никакой передачи данных третьим сторонам.
    3. Не поняли, где человек, — показываем русский.
 
-   Английская версия лежит отдельными страницами в /en/, поэтому
-   посетителю из СНГ её файлы не приходят вовсе.
+   Английская и турецкая версии лежат отдельными страницами в /en/ и /tr/,
+   поэтому посетителю из СНГ их файлы не приходят вовсе.
    ============================================================ */
 (function () {
   'use strict';
@@ -18,6 +18,7 @@
   var KEY = 'snz-lang';
   var RU_ZONES = /^(Asia\/(Almaty|Aqtau|Aqtobe|Atyrau|Oral|Qostanay|Qyzylorda|Tashkent|Samarkand|Ashgabat|Dushanbe|Bishkek|Baku|Yerevan|Tbilisi|Omsk|Novosibirsk|Krasnoyarsk|Yekaterinburg|Barnaul|Tomsk)|Europe\/(Moscow|Kiev|Kyiv|Minsk|Kaliningrad|Samara|Saratov|Volgograd|Astrakhan|Ulyanovsk|Chisinau|Simferopol))/;
   var RU_LANGS = /^(ru|kk|uk|be|uz|ky|tg|tk|az|hy|ka|mo|ab|os)/i;
+  var TR_ZONES = /^(Europe\/Istanbul|Asia\/Istanbul|Europe\/Nicosia|Asia\/Nicosia|Asia\/Famagusta)$/;
 
   function saved() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
@@ -27,12 +28,16 @@
     // часовой пояс — самый честный признак местоположения без запросов наружу
     try {
       var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-      if (tz) return RU_ZONES.test(tz) ? 'ru' : 'en';
+      if (tz) {
+        if (TR_ZONES.test(tz)) return 'tr';
+        return RU_ZONES.test(tz) ? 'ru' : 'en';
+      }
     } catch (e) {}
 
     // запасной признак — языки браузера
     var langs = navigator.languages || [navigator.language || ''];
     for (var i = 0; i < langs.length; i++) {
+      if (/^tr/i.test(langs[i])) return 'tr';
       if (RU_LANGS.test(langs[i])) return 'ru';
     }
     if (langs[0] && /^en/i.test(langs[0])) return 'en';
@@ -40,7 +45,8 @@
     return 'ru';   // не разобрались — русский
   }
 
-  var here = /^\/en(\/|$)/.test(location.pathname) ? 'en' : 'ru';
+  var m = location.pathname.match(/^\/(en|tr)(\/|$)/);
+  var here = m ? m[1] : 'ru';
   var want = saved() || guess();
 
   window.SNZlang = {
@@ -59,10 +65,11 @@
   if (want === here) return;
 
   // переносим человека на нужную версию той же страницы
-  var path = location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
-  var target = here === 'ru'
-    ? '/en' + (path === '/' ? '/' : path)
-    : path.replace(/^\/en/, '') || '/';
+  var path = location.pathname
+    .replace(/\/index\.html$/, '/')
+    .replace(/\.html$/, '')
+    .replace(/^\/(en|tr)/, '') || '/';
+  var target = want === 'ru' ? path : '/' + want + (path === '/' ? '/' : path);
 
   location.replace(target + location.search + location.hash);
 })();
